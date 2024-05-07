@@ -1,0 +1,6 @@
+[wrap-git]
+url = https://github.com/facebook/yoga.git
+revision = v3.0.4
+depth = 1
+patch_directory = yoga
+diff_files = yoga/yoga.patch

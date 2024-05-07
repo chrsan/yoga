@@ -14,7 +14,7 @@ cdef extern from *:
     ctypedef const YGNode* YGNodeConstRef
 
 
-cdef extern from "extern/yoga/yoga/YGEnums.h":
+cdef extern from "yoga/YGEnums.h":
     enum YGAlign:
         pass
 
@@ -49,7 +49,7 @@ cdef extern from "extern/yoga/yoga/YGEnums.h":
         pass
 
 
-cdef extern from "extern/yoga/yoga/YGConfig.h":
+cdef extern from "yoga/YGConfig.h":
     struct YGConfig:
         pass
 
@@ -118,7 +118,7 @@ class Edge(IntEnum):
     ALL = 8
 
 
-cdef extern from "extern/yoga/yoga/YGNodeLayout.h":
+cdef extern from "yoga/YGNodeLayout.h":
     float YGNodeLayoutGetLeft(YGNodeConstRef node)
 
     float YGNodeLayoutGetTop(YGNodeConstRef node)
@@ -203,13 +203,13 @@ class Unit(IntEnum):
     AUTO = 3
 
 
-cdef extern from "extern/yoga/yoga/YGValue.h":
+cdef extern from "yoga/YGValue.h":
     ctypedef struct YGValue:
         float value
         YGUnit unit
 
 
-cdef extern from "extern/yoga/yoga/YGNodeStyle.h":
+cdef extern from "yoga/YGNodeStyle.h":
     void YGNodeCopyStyle(YGNodeRef dst_node, YGNodeConstRef src_node);
 
     YGDirection YGNodeStyleGetDirection(YGNodeConstRef node)
@@ -402,7 +402,7 @@ class Gutter(IntEnum):
     ALL = 2
 
 
-cdef extern from "extern/yoga/yoga/YGNode.h":
+cdef extern from "yoga/YGNode.h":
     YGNodeRef YGNodeNew()
 
     YGNodeRef YGNodeNewWithConfig(YGConfigConstRef config)
